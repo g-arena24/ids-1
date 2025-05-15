@@ -1,0 +1,11 @@
+- Separazione dei livelli (UI, logica, persistenza)
+- Creazione oggetti con Builder per la flessiblità
+- Strategie di ordinamento ecc. personalizzate
+- Sincronizzazione tramite la notifica di un Observer
+- Command per incapsulare e separare le azioni dell'utente dalla persistenza
+
+UML:
+- UseCase Diagram: operazioni dell'utente
+- Class Diagram: ogni pattern utilizzato
+- Sequence Diagram: operazioni
+- Package Diagram: vista sul progetto
