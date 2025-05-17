@@ -1,30 +1,23 @@
 Creazione e gestione degli oggetti:
     - Factory Method/Abstract Factory
-        -> Validazione dei campi centralizzata e valori di default
-    - Builder
-        -> Creazione dei libri semplificata senza costruttori molto lunghi
+        -> Validazione dei campi centralizzata e valori di default --
 
 Gestione della persistenza:
     - Singleton
-        -> Garantisce che esista un solo punto d'accesso alle risorse
+        -> Garantisce che esista un solo punto d'accesso alle risorse -- controllare se esiste un oggetto File
     - Facade
-        -> Incapsula tutto in un'unica API nascondendo la complessità
+        -> Incapsula tutto in un'unica API nascondendo la complessità --
 
 Ricerca, filtraggio e ordinamento
     - Strategy
-        -> Raccoglie le varie politiche di operazione in un solo "luogo"
+        -> Raccoglie le varie politiche di operazione in un solo "luogo" --
 
 Aggiornamento UI
     - Observer
-        -> La vista si aggiorna in base al cambio dei dati sotto segnalazione dell'Observer
+        -> La vista si aggiorna in base al cambio dei dati sotto segnalazione dell'Observer --
 
 Operazioni utente
     - Command
-        -> Gestisce le operazioni dell'utente
+        -> Gestisce le operazioni dell'utente -- da combinare con strategy
+        -- command navigazione e strat
 
-Navigazione e altro
-    - Iterator
-        -> Scorre la lista completamente
-
-    - Chain of Responsability
-        -> Gestisce la validazione punto per punto passando la richiesta tra gli handler
