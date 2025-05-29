@@ -43,4 +43,9 @@ public class Libro {
                 genere + ". " + stato + ".";
     }
 
+    public String toCSV() {
+        return titolo + ',' + autore + ',' + isbn + ',' + genere + ',' + valutazione
+                + ',' + stato + System.lineSeparator();
+    }
+
 }

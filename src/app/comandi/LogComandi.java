@@ -11,7 +11,7 @@ public class LogComandi {
         this.log = new Stack<>();
     }
 
-    public static synchronized LogComandi getInstance() {
+    public static synchronized LogComandi getIstanza() {
         if (istanzaLog == null) {
             istanzaLog = new LogComandi();
         }
