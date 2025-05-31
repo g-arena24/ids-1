@@ -3,7 +3,6 @@ package app;
 import app.comandi.LogComandi;
 import app.stati.*;
 import app.ui.BenvenutoFrame;
-import app.ui.CustomFrame;
 
 public class Applicazione {
 

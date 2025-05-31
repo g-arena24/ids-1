@@ -1,7 +1,9 @@
 package app.comandi;
 
+import java.io.FileNotFoundException;
+
 public interface Comando {
 
-    void exec();
+    void exec() throws FileNotFoundException;
 
 }

@@ -4,7 +4,11 @@ import app.comandi.ComandoAstratto;
 
 public class ComandoCrea extends ComandoAstratto {
 
-    public String target;
+    private String target;
+
+    public void setTarget(String target) {
+        this.target = target;
+    }
 
     public ComandoCrea() {
         super();

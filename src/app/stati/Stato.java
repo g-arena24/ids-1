@@ -38,6 +38,10 @@ public class Stato {
         }
     }
 
+    public int getNum() {
+        return num;
+    }
+
     public File getRif() {
         return rif;
     }

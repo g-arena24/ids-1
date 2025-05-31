@@ -1,6 +1,9 @@
 package app.stati;
 
 import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Stack;
@@ -25,9 +28,9 @@ public class GestoreStati {
         log.push(s);
     }
 
-    public void ripristina(Stato s) {
-        int numeroStato = 0;
-        Iterator<Stato> it = log.iterator();
+    public void ripristina(Stato s) throws IOException {
+        int numeroStato = 0, j = 0;
+        Iterator<Stato> it = log.iterator(), it2 = log.iterator();
         while (it.hasNext()) {
             Stato stato = it.next();
             numeroStato++;
@@ -36,9 +39,14 @@ public class GestoreStati {
                 break;
             }
         }
-        ArrayList<Stato> copia = new ArrayList<>(log);
-        for (int i = numeroStato + 1; i < copia.size(); i++)
-            copia.remove(i);
+        while (it2.hasNext()) {
+            Stato stato = it2.next();
+            j++;
+            if (numeroStato < j) {
+                it.remove();
+                Files.delete(Path.of(stato.getRif().getPath()));
+            }
+        }
     }
 
     public void salvaPermanenti() {
@@ -52,6 +60,10 @@ public class GestoreStati {
                     it.remove();
             }
         }
+    }
+
+    public Stato getUltimoStato() {
+        return log.peek();
     }
 
 }
